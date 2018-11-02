@@ -1,0 +1,129 @@
+[hasha@fedora_pc ~/go/src/github.com/openshift/origin]$ tree -L 2
+.
+├── api                         #contains a Swagger 1.0 and OpenAPI (Swagger 2.0) API definition for the OpenShift and Kubernetes APIs.
+│   ├── docs
+│   ├── protobuf-spec
+│   ├── README.md
+│   └── swagger-spec
+├── assets                 
+│   └── README.md
+├── cmd                         #contains startup file of the executables for OpenShift
+│   ├── doc.go
+│   ├── gitserver
+│   ├── hypershift
+│   ├── oadm
+│   ├── oc
+│   ├── openshift
+│   ├── openshift-node-config
+│   ├── OWNERS
+│   └── template-service-broker
+├── contrib                
+│   ├── completions
+│   ├── excluder
+│   ├── migration
+│   ├── systemd
+│   └── vagrant
+├── docs
+│   ├── builds.md
+│   ...
+├── examples                    #contains sample applications for trying out the concepts in OpenShift
+│   ├── atomic-registry
+│   ...
+├── hack                        #many useful script for developer.
+│   ├── test-end-to-end.sh
+│   ├── test-go.sh
+│   ├── test-integration.sh
+|   ...
+├── images                      #Dockerfiles for main infrastructures of openshift.
+│   ├── base
+│   ├── builder
+│   ├── cli
+│   ├── deployer
+│   ├── node
+│   ├── origin
+│   ├── pod
+│   ├── router
+│   ├── template-service-broker
+│   └── tests
+|   ...
+├── install                     #Templates of all components for openshift install
+│   ├── etcd
+│   ├── kube-apiserver
+│   ├── kube-controller-manager
+│   ├── kube-dns
+│   ├── kube-proxy
+│   ├── kube-scheduler
+│   ├── openshift-apiserver
+│   ├── openshift-controller-manager
+│   ├── openshift-web-console-operator
+│   ├── origin-web-console
+│   ├── service-catalog-broker-resources
+│   └── templateservicebroker
+├── Makefile                    #build tool. Build origin,test suit binaries..
+├── _output                     #binary location after build 
+│   ├── local
+│   └── scripts
+├── OWNERS                      #reviewers & approvers 
+├── pkg                         #contains all of the libraries for all OpenShift components/resource objects
+│   ├── admission
+│   ├── api                    
+│   ├── apiserver
+│   ├── apps                    #contains all the controllers which taken together implement the deployment system's behavior.
+│   ├── build                   #contains the OpenShift build system, especially is the inplemention of BuildController.
+│   ├── bulk
+│   ├── client
+│   ├── cmd
+│   ├── controller
+│   ├── dns                     #inplemention of openshift-internal dns with dnsmasq
+│   ├── doc.go
+│   ├── git                     #It allows working with Git repositories
+│   ├── gitserver
+│   ├── image
+│   ├── ingress
+│   ├── network                 #contains SDN code that runs on masters/nodes and provides OpenShift-internal SDN related APIs
+│   ├── oauth
+│   ├── oauthserver
+│   ├── oc                      #contains the the basic function of oc,such as create,describe,login,status,cluster up...
+│   ├── openapi
+│   ├── OWNERS
+│   ├── pod
+│   ├── project                 #provides support for projects including project controller and authorization to Project resources
+│   ├── proxy
+│   ├── quota
+│   ├── route                   #provides support for managing and watching routes.
+│   ├── router                  #contains the abstraction for router backend implementations
+│   ├── scheduler
+│   ├── security
+│   ├── service
+│   ├── serviceaccounts
+│   ├── template
+│   ├── templateservicebroker    #template service broker implementation
+│   ├── util                     #the base lib for all components
+├── test                         #contains cross-functional test suites for OpenShift such as e2e,integration testing.
+│   ├── cmd
+│   ├── common
+│   ├── doc.go
+│   ├── end-to-end
+│   ├── extended
+│   ├── integration
+│   ├── old-start-configs
+│   ├── OWNERS
+│   ├── templates
+│   ├── testdata
+│   ├── third_party_dependencies.go
+│   └── util
+├── tools                        #tool kits used in openshift including third-party tools such as BuildAnalyzer, etcdhelper etc.
+│   ├── buildanalyzer
+│   ├── changelog
+│   ├── etcdhelper
+|   ... 
+├── UPGRADE.md
+├── Vagrantfile                  #spinning cluster using virtualbox
+└── vendor                       #external dependencies of openshift. k8s,etcd,containd,CNI,overlay,devicemapper....
+    ├── cloud.google.com
+    ├── github.com
+    ├── golang.org
+    ├── k8s.io
+    ...
+
+
